@@ -6,10 +6,10 @@ import { Briefcase, Brain, Trophy } from "lucide-react";
 
 const experiences = [
   {
-    role: "Quality Analyst Intern",
-    company: "Industry Internship Partner",
+    role: "Quality Analyst ",
+    company: "Human Archive",
     location: "Bengaluru, India",
-    duration: "Jan 2025 - Mar 2025",
+    duration: "July 2026 - Present",
     description: "Conducted rigorous software quality assurance testing, developed automated test pipelines, logged software defects, and worked with engineering teams to deploy robust releases.",
     icon: Briefcase,
     accent: "teal",
@@ -41,7 +41,7 @@ export default function Experience() {
       <div className="absolute top-1/2 right-1/10 w-96 h-96 blob-violet opacity-5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-xs font-semibold tracking-[0.25em] text-accent-violet uppercase mb-3">
@@ -56,9 +56,9 @@ export default function Experience() {
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical central path line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-white/5 -translate-x-1/2" />
-          
+
           {/* Glowing scrolling visual line overlay */}
-          <motion.div 
+          <motion.div
             className="absolute left-4 md:left-1/2 top-0 w-[2px] bg-gradient-to-b from-accent-teal to-accent-violet origin-top -translate-x-1/2"
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
@@ -75,23 +75,21 @@ export default function Experience() {
               const isEven = idx % 2 === 0;
 
               return (
-                <div 
-                  key={exp.role} 
-                  className={`relative flex flex-col md:flex-row items-stretch ${
-                    isEven ? "md:flex-row-reverse" : ""
-                  }`}
+                <div
+                  key={exp.role}
+                  className={`relative flex flex-col md:flex-row items-stretch ${isEven ? "md:flex-row-reverse" : ""
+                    }`}
                   style={{
                     contentVisibility: "auto",
                   }}
                 >
                   {/* central node indicator */}
                   <div className="absolute left-4 md:left-1/2 top-6 -translate-x-1/2 z-10 flex items-center justify-center">
-                    <motion.div 
-                      className={`w-9 h-9 rounded-full bg-background border-2 flex items-center justify-center transition-colors duration-300 ${
-                        isTeal 
-                          ? "border-accent-teal shadow-[0_0_15px_rgba(94,234,212,0.3)] text-accent-teal" 
+                    <motion.div
+                      className={`w-9 h-9 rounded-full bg-background border-2 flex items-center justify-center transition-colors duration-300 ${isTeal
+                          ? "border-accent-teal shadow-[0_0_15px_rgba(94,234,212,0.3)] text-accent-teal"
                           : "border-accent-violet shadow-[0_0_15px_rgba(139,92,246,0.3)] text-accent-violet"
-                      }`}
+                        }`}
                       initial={{ scale: 0.6, opacity: 0 }}
                       whileInView={{ scale: 1, opacity: 1 }}
                       viewport={{ once: true, margin: "-100px" }}
@@ -102,33 +100,30 @@ export default function Experience() {
                   </div>
 
                   {/* Card panel container */}
-                  <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${
-                    isEven ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"
-                  }`}>
+                  <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${isEven ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"
+                    }`}>
                     <motion.div
-                      className={`glass-card p-6 rounded-2xl border border-white/5 relative flex flex-col ${
-                        isTeal ? "glass-card-hover-teal" : "glass-card-hover-violet"
-                      }`}
-                      initial={{ 
-                        opacity: 0, 
-                        x: isEven ? 30 : -30 
+                      className={`glass-card p-6 rounded-2xl border border-white/5 relative flex flex-col ${isTeal ? "glass-card-hover-teal" : "glass-card-hover-violet"
+                        }`}
+                      initial={{
+                        opacity: 0,
+                        x: isEven ? 30 : -30
                       }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true, margin: "-100px" }}
                       transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 15 }}
                     >
                       {/* Date details */}
-                      <span className={`text-xs font-mono font-bold tracking-wider mb-2 ${
-                        isTeal ? "text-accent-teal" : "text-accent-violet"
-                      }`}>
+                      <span className={`text-xs font-mono font-bold tracking-wider mb-2 ${isTeal ? "text-accent-teal" : "text-accent-violet"
+                        }`}>
                         {exp.duration}
                       </span>
-                      
+
                       {/* Title Header */}
                       <h3 className="text-lg font-bold text-foreground">
                         {exp.role}
                       </h3>
-                      
+
                       <div className="text-sm font-medium text-text-secondary mb-4">
                         {exp.company} &bull; <span className="font-normal text-xs">{exp.location}</span>
                       </div>
@@ -138,7 +133,7 @@ export default function Experience() {
                       </p>
                     </motion.div>
                   </div>
-                  
+
                   {/* Empty cell spacer on opposite side for desktop grid centering */}
                   <div className="hidden md:block w-1/2" />
                 </div>
