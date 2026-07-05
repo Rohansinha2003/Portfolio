@@ -61,11 +61,10 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-4 transition-all duration-300">
-        <div className={`flex items-center justify-between py-3 px-6 rounded-2xl transition-all duration-300 ${
-          isScrolled 
-            ? "glass-panel shadow-[0_10px_30px_rgba(0,0,0,0.3)]" 
+        <div className={`flex items-center justify-between py-3 px-6 rounded-2xl transition-all duration-300 ${isScrolled
+            ? "glass-panel shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
             : "bg-transparent border border-transparent"
-        }`}>
+          }`}>
           {/* Logo / Initials */}
           <a href="#" className="text-xl font-bold tracking-wider text-foreground hover:text-accent-teal transition-colors">
             RS<span className="text-accent-teal">.</span>
@@ -94,7 +93,7 @@ export default function Navbar() {
           {/* Social Icons & Contact Link */}
           <div className="hidden md:flex items-center gap-x-4">
             <a
-              href="https://github.com"
+              href="https://github.com/Rohansinha2003"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
@@ -103,7 +102,7 @@ export default function Navbar() {
               <GithubIcon className="w-[18px] h-[18px]" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/rohan-sinhaa/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
@@ -148,9 +147,8 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-base font-medium py-2 border-b border-white/5 ${
-                  activeSection === item.href ? "text-accent-teal font-semibold" : "text-text-secondary"
-                }`}
+                className={`text-base font-medium py-2 border-b border-white/5 ${activeSection === item.href ? "text-accent-teal font-semibold" : "text-text-secondary"
+                  }`}
               >
                 {item.name}
               </a>
