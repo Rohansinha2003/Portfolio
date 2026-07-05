@@ -8,7 +8,7 @@ import { Briefcase, Code, Cpu, FolderGit } from "lucide-react";
 const stats = [
   {
     label: "Projects Completed",
-    value: "15+",
+    value: "35+",
     description: "Built & Deployed",
     icon: FolderGit,
     color: "text-accent-teal",
@@ -32,7 +32,7 @@ const stats = [
   },
   {
     label: "Problem Solving",
-    value: "100+",
+    value: "350+",
     description: "DSA Problems",
     icon: Code,
     color: "text-accent-violet",
@@ -46,7 +46,7 @@ export default function About() {
       <div className="absolute inset-0 blob-teal opacity-5 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-xs font-semibold tracking-[0.25em] text-accent-teal uppercase mb-3">
@@ -58,9 +58,9 @@ export default function About() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column: Premium Profile Portrait */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-5 flex justify-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export default function About() {
             <div className="relative group w-full max-w-[360px] aspect-square rounded-3xl overflow-hidden glass-card p-2 hover:border-accent-teal/40 transition-colors duration-500">
               {/* Outer ambient glow behind card */}
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-accent-teal to-accent-violet opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-500" />
-              
+
               {/* Image Container */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-background">
                 <Image
@@ -81,7 +81,7 @@ export default function About() {
                   priority
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                
+
                 {/* Visual Glass overlays */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-80" />
               </div>
@@ -90,8 +90,8 @@ export default function About() {
 
           {/* Right Column: Bio & Stats Grid */}
           <div className="lg:col-span-7 space-y-8">
-            
-            <motion.div 
+
+            <motion.div
               className="space-y-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

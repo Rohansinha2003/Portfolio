@@ -27,7 +27,7 @@ const projects = [
     description: "An AI-powered personal finance advisor that analyzes spending habits and provides conversational budgeting recommendations using LLMs and Machine Learning.",
     tech: ["React", "Node.js", "MongoDB", "LLM"],
     image: "/project-finance.png",
-    github: "https://github.com",
+    github: "https://github.com/Rohansinha2003/finance-buddy",
     live: "https://demo.com",
     accent: "teal",
   },
@@ -36,7 +36,7 @@ const projects = [
     description: "A real-time hand gesture recognition system designed with computer vision technologies that captures skeletal coordinates and classifies signs dynamically.",
     tech: ["Python", "TensorFlow", "OpenCV", "CVZone"],
     image: "/project-handsign.png",
-    github: "https://github.com",
+    github: "https://github.com/Rohansinha2003/Hand_detection",
     live: "https://demo.com",
     accent: "violet",
   },
@@ -45,7 +45,7 @@ const projects = [
     description: "A modern full-stack event booking platform with responsive UI, real-time ticket availability, QR codes confirmation, and admin dashboard views.",
     tech: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
     image: "/project-events.png",
-    github: "https://github.com",
+    github: "https://github.com/Rohansinha2003/EVENT_MANAGEMENT",
     live: "https://demo.com",
     accent: "teal",
   },
@@ -54,7 +54,7 @@ const projects = [
     description: "A secure, real-time instant messaging application utilizing WebSockets for instant communications, secure authentication, and a responsive chat window.",
     tech: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
     image: "/project-chat.png",
-    github: "https://github.com",
+    github: "https://github.com/Rohansinha2003/Chat-App",
     live: "https://demo.com",
     accent: "violet",
   },
@@ -90,7 +90,7 @@ export default function Projects() {
     const box = card.getBoundingClientRect();
     const x = e.clientX - box.left;
     const y = e.clientY - box.top;
-    
+
     // Calculate rotation angles (max 8 degrees tilt)
     const centerX = box.width / 2;
     const centerY = box.height / 2;
@@ -115,7 +115,7 @@ export default function Projects() {
       <div className="absolute bottom-1/3 left-1/10 w-96 h-96 blob-teal opacity-5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-xs font-semibold tracking-[0.25em] text-accent-teal uppercase mb-3">
@@ -127,7 +127,7 @@ export default function Projects() {
         </div>
 
         {/* Project Cards Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10"
           variants={containerVariants}
           initial="hidden"
@@ -137,7 +137,7 @@ export default function Projects() {
           {projects.map((project, idx) => {
             const state = hoverStates[idx] || { rotX: 0, rotY: 0, x: 0, y: 0, isHovered: false };
             const isTeal = project.accent === "teal";
-            
+
             return (
               <motion.div
                 key={project.title}
@@ -157,9 +157,8 @@ export default function Projects() {
                       : `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`,
                     transition: state.isHovered ? "none" : "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
                   }}
-                  className={`relative w-full rounded-3xl overflow-hidden glass-card p-4 flex flex-col justify-between h-full select-none cursor-pointer border border-white/5 ${
-                    isTeal ? "hover:border-accent-teal/30" : "hover:border-accent-violet/30"
-                  }`}
+                  className={`relative w-full rounded-3xl overflow-hidden glass-card p-4 flex flex-col justify-between h-full select-none cursor-pointer border border-white/5 ${isTeal ? "hover:border-accent-teal/30" : "hover:border-accent-violet/30"
+                    }`}
                 >
                   {/* Spotlight Hover Glow Effect */}
                   {state.isHovered && (
@@ -232,11 +231,10 @@ export default function Projects() {
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex-1 inline-flex items-center justify-center gap-x-2 py-2 px-4 rounded-xl text-xs font-semibold text-background transition-all hover:scale-[1.02] ${
-                          isTeal 
-                            ? "bg-accent-teal shadow-[0_4px_15px_rgba(94,234,212,0.15)] hover:shadow-[0_4px_25px_rgba(94,234,212,0.3)]"
-                            : "bg-accent-violet shadow-[0_4px_15px_rgba(139,92,246,0.15)] hover:shadow-[0_4px_25px_rgba(139,92,246,0.3)]"
-                        }`}
+                        className={`flex-1 inline-flex items-center justify-center gap-x-2 py-2 px-4 rounded-xl text-xs font-semibold text-background transition-all hover:scale-[1.02] ${isTeal
+                          ? "bg-accent-teal shadow-[0_4px_15px_rgba(94,234,212,0.15)] hover:shadow-[0_4px_25px_rgba(94,234,212,0.3)]"
+                          : "bg-accent-violet shadow-[0_4px_15px_rgba(139,92,246,0.15)] hover:shadow-[0_4px_25px_rgba(139,92,246,0.3)]"
+                          }`}
                       >
                         <ExternalLink className="w-4 h-4" />
                         Live Demo
