@@ -119,7 +119,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/resume.pdf"
+              href="/Rohan_Sinha.pdf"
               download
               className="relative inline-flex items-center justify-center px-5 py-3.5 text-sm font-medium rounded-xl border border-white/5 bg-transparent text-text-secondary hover:text-foreground transition-all hover:bg-white/5 group"
             >
