@@ -15,20 +15,20 @@ const experiences = [
     accent: "teal",
   },
   {
-    role: "Machine Learning Projects Developer",
-    company: "Research & Development Projects",
-    location: "Bengaluru, India",
+    role: "Web Developer Intern",
+    company: "Bhilai Steel Plant",
+    location: "Bhilai, India",
     duration: "2024 - Present",
-    description: "Designed and trained deep learning models including convolutional neural networks for computer vision systems, fine-tuned large language models, and integrated ML systems with React/Node interfaces.",
+    description: "Developed responsive web applications, created custom internal database forms, optimized site page performance, and worked with system administrators to maintain robust intranet web modules.",
     icon: Brain,
     accent: "violet",
   },
   {
-    role: "Hackathon Participant",
-    company: "HackIndia & Local Tech Hackathons",
-    location: "India",
-    duration: "Feb 2025",
-    description: "Competed in active 36-hour coding sprints, collaborating in diverse teams to prototype innovative AI-driven software, winning recognition and debugging under tight constraints.",
+    role: "AI Intern",
+    company: "TechSakshan CSR initiative of Microsoft & SAP",
+    location: "Remote",
+    duration: "Dec 2024 - Feb 2025",
+    description: "Engineered end-to-end ML workflows covering data preprocessing, feature engineering, model training, and evaluation using Python, Pandas, NumPy, and Scikit-Learn",
     icon: Trophy,
     accent: "teal",
   },
@@ -87,8 +87,8 @@ export default function Experience() {
                   <div className="absolute left-4 md:left-1/2 top-6 -translate-x-1/2 z-10 flex items-center justify-center">
                     <motion.div
                       className={`w-9 h-9 rounded-full bg-background border-2 flex items-center justify-center transition-colors duration-300 ${isTeal
-                          ? "border-accent-teal shadow-[0_0_15px_rgba(94,234,212,0.3)] text-accent-teal"
-                          : "border-accent-violet shadow-[0_0_15px_rgba(139,92,246,0.3)] text-accent-violet"
+                        ? "border-accent-teal shadow-[0_0_15px_rgba(94,234,212,0.3)] text-accent-teal"
+                        : "border-accent-violet shadow-[0_0_15px_rgba(139,92,246,0.3)] text-accent-violet"
                         }`}
                       initial={{ scale: 0.6, opacity: 0 }}
                       whileInView={{ scale: 1, opacity: 1 }}
