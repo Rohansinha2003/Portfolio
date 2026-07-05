@@ -1,26 +1,142 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0B0F17;
+  --foreground: #F8FAFC;
+  --bg-secondary: #111827;
+  --accent-teal: #5EEAD4;
+  --accent-violet: #8B5CF6;
+  --text-secondary: #94A3B8;
+  --border-glow: rgba(255, 255, 255, 0.08);
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-accent-teal: var(--accent-teal);
+  --color-accent-violet: var(--accent-violet);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-glow: var(--border-glow);
+  
+  --font-sans: var(--font-inter), sans-serif;
+  --font-heading: var(--font-outfit), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base resets & custom layouts */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-teal);
+}
+
+/* Custom Selection Color */
+::selection {
+  background: rgba(94, 234, 212, 0.2);
+  color: #ffffff;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glow);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glow);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover-teal:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(94, 234, 212, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(94, 234, 212, 0.15);
+  transform: translateY(-4px);
+}
+
+.glass-card-hover-violet:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Animated gradient text */
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient-text {
+  background: linear-gradient(to right, var(--accent-teal), var(--accent-violet), var(--accent-teal));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-flow 6s linear infinite;
+}
+
+/* Cursor Glow Effect */
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(94, 234, 212, 0.04) 0%, rgba(139, 92, 246, 0.02) 40%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  mix-blend-mode: screen;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom radial gradients for blobs */
+.blob-teal {
+  background: radial-gradient(circle, rgba(94, 234, 212, 0.1) 0%, transparent 60%);
+}
+
+.blob-violet {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
 }
