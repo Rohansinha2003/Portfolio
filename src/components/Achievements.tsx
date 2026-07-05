@@ -14,7 +14,7 @@ const achievements = [
     glow: "rgba(94, 234, 212, 0.15)",
   },
   {
-    title: "100+ DSA Problems Solved",
+    title: "350+ DSA Problems Solved",
     description: "Refined mathematical and logical problem solving by writing optimized code solutions for complex algorithms and data structures.",
     icon: Code2,
     accent: "violet",
@@ -68,7 +68,7 @@ export default function Achievements() {
       <div className="absolute inset-0 blob-teal opacity-[0.02] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-xs font-semibold tracking-[0.25em] text-accent-teal uppercase mb-3">
@@ -80,7 +80,7 @@ export default function Achievements() {
         </div>
 
         {/* Achievements Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
           variants={containerVariants}
           initial="hidden"
@@ -90,14 +90,13 @@ export default function Achievements() {
           {achievements.map((ach) => {
             const IconComponent = ach.icon;
             const isTeal = ach.accent === "teal";
-            
+
             return (
               <motion.div
                 key={ach.title}
                 variants={itemVariants}
-                className={`glass-card p-6 rounded-2xl flex items-start gap-5 hover:-translate-y-1 transition-all duration-300 relative ${
-                  isTeal ? "glass-card-hover-teal" : "glass-card-hover-violet"
-                }`}
+                className={`glass-card p-6 rounded-2xl flex items-start gap-5 hover:-translate-y-1 transition-all duration-300 relative ${isTeal ? "glass-card-hover-teal" : "glass-card-hover-violet"
+                  }`}
                 style={{
                   contentVisibility: "auto",
                 }}
@@ -106,23 +105,20 @@ export default function Achievements() {
                 }}
               >
                 {/* Accent Highlight Bar */}
-                <div className={`absolute left-0 top-6 bottom-6 w-[3px] rounded-r-md ${
-                  isTeal ? "bg-accent-teal" : "bg-accent-violet"
-                }`} />
+                <div className={`absolute left-0 top-6 bottom-6 w-[3px] rounded-r-md ${isTeal ? "bg-accent-teal" : "bg-accent-violet"
+                  }`} />
 
                 {/* Left side icon */}
-                <div className={`p-3 rounded-xl border border-white/5 bg-white/5 flex-shrink-0 ${
-                  isTeal ? "text-accent-teal" : "text-accent-violet"
-                }`}>
+                <div className={`p-3 rounded-xl border border-white/5 bg-white/5 flex-shrink-0 ${isTeal ? "text-accent-teal" : "text-accent-violet"
+                  }`}>
                   <IconComponent className="w-5 h-5" />
                 </div>
 
                 {/* Right side textual information */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-x-2">
-                    <span className={`text-[10px] font-semibold font-mono tracking-wider px-2 py-0.5 rounded-full bg-white/5 border border-white/5 uppercase text-text-secondary ${
-                      isTeal ? "text-accent-teal/80 border-accent-teal/10" : "text-accent-violet/80 border-accent-violet/10"
-                    }`}>
+                    <span className={`text-[10px] font-semibold font-mono tracking-wider px-2 py-0.5 rounded-full bg-white/5 border border-white/5 uppercase text-text-secondary ${isTeal ? "text-accent-teal/80 border-accent-teal/10" : "text-accent-violet/80 border-accent-violet/10"
+                      }`}>
                       {ach.metric}
                     </span>
                   </div>

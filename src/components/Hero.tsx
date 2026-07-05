@@ -22,7 +22,7 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
 );
 
 // Lazy load the 3D scene to prevent SSR hydration errors
-const HeroScene = dynamic(() => import("./HeroScene"), { 
+const HeroScene = dynamic(() => import("./HeroScene"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full min-h-[400px] md:min-h-[550px] flex items-center justify-center">
@@ -43,7 +43,7 @@ export default function Hero() {
     let timer: NodeJS.Timeout;
     const currentRole = roles[roleIndex];
     const typingSpeed = isDeleting ? 40 : 80;
-    
+
     if (isDeleting) {
       timer = setTimeout(() => {
         setCurrentText(currentRole.substring(0, currentText.length - 1));
@@ -71,9 +71,9 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/10 w-96 h-96 blob-violet opacity-30 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-        
+
         {/* Left Side Content */}
-        <motion.div 
+        <motion.div
           className="lg:col-span-7 text-left space-y-6"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -103,24 +103,24 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-4 pt-4">
-            <a 
-              href="#projects" 
+            <a
+              href="#projects"
               className="group relative inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold rounded-xl bg-accent-teal text-background hover:scale-105 transition-all shadow-[0_4px_20px_rgba(94,234,212,0.25)] hover:shadow-[0_4px_30px_rgba(94,234,212,0.4)]"
             >
               View Projects
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
 
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="relative inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold rounded-xl border border-white/10 bg-bg-secondary/40 text-foreground hover:bg-white/5 hover:border-white/15 transition-all"
             >
               Contact Me
             </a>
-            
-            <a 
-              href="/resume.pdf" 
-              download 
+
+            <a
+              href="/resume.pdf"
+              download
               className="relative inline-flex items-center justify-center px-5 py-3.5 text-sm font-medium rounded-xl border border-white/5 bg-transparent text-text-secondary hover:text-foreground transition-all hover:bg-white/5 group"
             >
               <Download className="w-4 h-4 mr-2 group-hover:translate-y-0.5 transition-transform" />
@@ -130,26 +130,26 @@ export default function Hero() {
 
           {/* Social icons */}
           <div className="flex items-center gap-x-5 pt-6">
-            <a 
-              href="https://github.com" 
-              target="_blank" 
+            <a
+              href="https://github.com/Rohansinha2003"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-foreground hover:scale-110 transition-all"
               aria-label="GitHub"
             >
               <GithubIcon className="w-[22px] h-[22px]" />
             </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/rohan-sinhaa/"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-foreground hover:scale-110 transition-all"
               aria-label="LinkedIn"
             >
               <LinkedinIcon className="w-[22px] h-[22px]" />
             </a>
-            <a 
-              href="mailto:contact@rohansinha.dev" 
+            <a
+              href="mailto:2003rohansinha@gmail.com"
               className="text-text-secondary hover:text-foreground hover:scale-110 transition-all"
               aria-label="Email"
             >
@@ -159,7 +159,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Right Side 3D Scene */}
-        <motion.div 
+        <motion.div
           className="lg:col-span-5 w-full h-[400px] md:h-[550px]"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}

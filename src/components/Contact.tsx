@@ -35,12 +35,12 @@ export default function Contact() {
     if (!form.name || !form.email || !form.message) return;
 
     setIsSubmitting(true);
-    
+
     // Simulate sending message API request
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSent(true);
-      
+
       // Trigger premium celebration confetti matching our theme colors
       confetti({
         particleCount: 80,
@@ -60,9 +60,9 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-24 bg-background">
       <div className="absolute top-1/4 left-1/10 w-96 h-96 blob-teal opacity-5 rounded-full blur-[100px] pointer-events-none" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-xs font-semibold tracking-[0.25em] text-accent-teal uppercase mb-3">
@@ -74,9 +74,9 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 max-w-5xl mx-auto">
-          
+
           {/* Left Column: Details */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-5 space-y-6"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -85,7 +85,7 @@ export default function Contact() {
           >
             <div className="glass-card p-8 rounded-3xl space-y-8 relative overflow-hidden border border-white/5">
               <div className="absolute top-0 right-0 w-32 h-32 blob-teal opacity-10 rounded-full blur-2xl pointer-events-none" />
-              
+
               <div className="space-y-2">
                 <h3 className="text-xl font-bold text-foreground">Contact Details</h3>
                 <p className="text-sm text-text-secondary">
@@ -95,8 +95,8 @@ export default function Contact() {
 
               {/* Direct Info List */}
               <div className="space-y-6">
-                <a 
-                  href="mailto:contact@rohansinha.dev" 
+                <a
+                  href="mailto:2003rohansinha@gmail.com"
                   className="flex items-center gap-x-4 group text-text-secondary hover:text-foreground transition-colors"
                 >
                   <div className="p-3 rounded-xl border border-white/5 bg-white/5 text-accent-teal group-hover:border-accent-teal/20 transition-all duration-300">
@@ -104,13 +104,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-[10px] uppercase tracking-wider text-text-secondary font-mono">Email</div>
-                    <div className="text-sm font-semibold">contact@rohansinha.dev</div>
+                    <div className="text-sm font-semibold">2003rohansinha@gmail.com</div>
                   </div>
                 </a>
 
-                <a 
-                  href="https://linkedin.com" 
-                  target="_blank" 
+                <a
+                  href="https://www.linkedin.com/in/rohan-sinhaa/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-x-4 group text-text-secondary hover:text-foreground transition-colors"
                 >
@@ -123,9 +123,9 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <a 
-                  href="https://github.com" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/Rohansinha2003"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-x-4 group text-text-secondary hover:text-foreground transition-colors"
                 >
@@ -152,15 +152,15 @@ export default function Contact() {
           </motion.div>
 
           {/* Right Column: Contact Form */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-7"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <form 
-              onSubmit={handleSubmit} 
+            <form
+              onSubmit={handleSubmit}
               className="glass-card p-8 rounded-3xl space-y-6 relative border border-white/5"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -227,11 +227,10 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting || isSent}
-                className={`w-full inline-flex items-center justify-center gap-x-2 py-4 rounded-xl text-sm font-bold text-background transition-all duration-300 ${
-                  isSent
-                    ? "bg-emerald-400 shadow-[0_4px_20px_rgba(52,211,153,0.3)]"
-                    : "bg-accent-teal shadow-[0_4px_20px_rgba(94,234,212,0.25)] hover:shadow-[0_4px_30px_rgba(94,234,212,0.4)] hover:scale-[1.01]"
-                }`}
+                className={`w-full inline-flex items-center justify-center gap-x-2 py-4 rounded-xl text-sm font-bold text-background transition-all duration-300 ${isSent
+                  ? "bg-emerald-400 shadow-[0_4px_20px_rgba(52,211,153,0.3)]"
+                  : "bg-accent-teal shadow-[0_4px_20px_rgba(94,234,212,0.25)] hover:shadow-[0_4px_30px_rgba(94,234,212,0.4)] hover:scale-[1.01]"
+                  }`}
               >
                 {isSubmitting ? (
                   <div className="w-5 h-5 rounded-full border-2 border-background border-t-transparent animate-spin" />
