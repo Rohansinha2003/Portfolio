@@ -188,7 +188,7 @@ function Home() {
 
       <footer>
         <div className="wrap">
-          <span>© 2026 · {site.name} · Portfolio v1</span>
+          <span>© 2026 · {site.name} · Portfolio </span>
           <span>Built with ❤️ by Rohan Sinha</span>
         </div>
       </footer>
