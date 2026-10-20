@@ -189,7 +189,7 @@ function Home() {
       <footer>
         <div className="wrap">
           <span>© 2026 · {site.name} · Portfolio v1</span>
-          <span>Built with TanStack Start · Three.js</span>
+          <span>Built with ❤️ by Rohan Sinha</span>
         </div>
       </footer>
     </>
