@@ -4,15 +4,15 @@
 // ──────────────────────────────────────────────────────────────
 
 export const site = {
-  name: 'YOUR NAME', // [PLACEHOLDER]
-  firstName: 'Your',
-  lastName: 'Name',
+  name: 'Rohan Sinha', // [PLACEHOLDER]
+  firstName: 'Rohan',
+  lastName: 'Sinha',
   handle: 'yourname',
   role: 'Aspiring Software Engineer', // [PLACEHOLDER]
-  city: 'Your City',
-  email: 'you@example.com', // [PLACEHOLDER]
-  github: 'your-github-username', // [PLACEHOLDER] used for the live GitHub section
-  linkedin: 'https://www.linkedin.com/in/your-handle',
+  city: 'Bengalore',
+  email: '2003rohansinha@gmail.com', // [PLACEHOLDER]
+  github: 'Rohansinha2003', // [PLACEHOLDER] used for the live GitHub section
+  linkedin: 'https://www.linkedin.com/in/rohan-sinhaa/',
   instagram: 'https://instagram.com/your-handle',
   resumeUrl: '/resume',
   tagline:
