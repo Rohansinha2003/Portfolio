@@ -7,8 +7,8 @@ export const site = {
   name: 'Rohan Sinha', // [PLACEHOLDER]
   firstName: 'Rohan',
   lastName: 'Sinha',
-  handle: 'yourname',
-  role: 'Aspiring Software Engineer', // [PLACEHOLDER]
+  handle: 'rohansinha',
+  role: 'ML Engineer', // [PLACEHOLDER]
   city: 'Bengalore',
   email: '2003rohansinha@gmail.com', // [PLACEHOLDER]
   github: 'Rohansinha2003', // [PLACEHOLDER] used for the live GitHub section
@@ -16,10 +16,9 @@ export const site = {
   x: 'https://x.com/RohanSinhaAI',
   resumeUrl: '/resume',
   tagline:
-    'Short one-line pitch. What you study, what you recently shipped, and what you are looking for.', // [PLACEHOLDER]
+    'Building intelligent systems, pushing the boundaries of AI, and engineering the future—one model at a time.', // [PLACEHOLDER]
   stats: [
-    { value: '9.0', label: 'Avg GPA / 10' },
-    { value: 'V', label: 'Semester' },
+    { value: 'Does it matter?', label: 'Avg CGPA' },
     { value: '3+1', label: 'Projects shipped' },
   ],
   marquee: ['ENGINEER', 'PROBLEM SOLVER', 'YOUR HOBBY', 'YOUR OTHER HOBBY', 'LANGUAGE · LANGUAGE'],
