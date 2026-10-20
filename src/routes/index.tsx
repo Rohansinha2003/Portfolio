@@ -64,9 +64,7 @@ function Home() {
             </div>
           </div>
           <div className="portrait">
-            {/* Put your photo at public/portrait.jpg and uncomment the img below */}
-            {/* <img src="/portrait.jpg" alt={site.name} /> */}
-            <span>YOUR PHOTO<br />public/portrait.jpg</span>
+            <img src="/portrait.png" alt={site.name} />
             <div className="badge">{site.handle} · {site.city.toLowerCase()}</div>
           </div>
         </div>
