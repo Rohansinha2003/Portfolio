@@ -13,7 +13,7 @@ export const site = {
   email: '2003rohansinha@gmail.com', // [PLACEHOLDER]
   github: 'Rohansinha2003', // [PLACEHOLDER] used for the live GitHub section
   linkedin: 'https://www.linkedin.com/in/rohan-sinhaa/',
-  x: 'https://x.com/your-handle',
+  x: 'https://x.com/RohanSinhaAI',
   resumeUrl: '/resume',
   tagline:
     'Short one-line pitch. What you study, what you recently shipped, and what you are looking for.', // [PLACEHOLDER]
