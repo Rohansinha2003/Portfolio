@@ -1,0 +1,153 @@
+// ──────────────────────────────────────────────────────────────
+// EDIT THIS FILE. Everything on the site comes from here.
+// Every value marked [PLACEHOLDER] should be replaced with your own.
+// ──────────────────────────────────────────────────────────────
+
+export const site = {
+  name: 'YOUR NAME', // [PLACEHOLDER]
+  firstName: 'Your',
+  lastName: 'Name',
+  handle: 'yourname',
+  role: 'Aspiring Software Engineer', // [PLACEHOLDER]
+  city: 'Your City',
+  email: 'you@example.com', // [PLACEHOLDER]
+  github: 'your-github-username', // [PLACEHOLDER] used for the live GitHub section
+  linkedin: 'https://www.linkedin.com/in/your-handle',
+  instagram: 'https://instagram.com/your-handle',
+  resumeUrl: '/resume',
+  tagline:
+    'Short one-line pitch. What you study, what you recently shipped, and what you are looking for.', // [PLACEHOLDER]
+  stats: [
+    { value: '9.0', label: 'Avg GPA / 10' },
+    { value: 'V', label: 'Semester' },
+    { value: '3+1', label: 'Projects shipped' },
+  ],
+  marquee: ['ENGINEER', 'PROBLEM SOLVER', 'YOUR HOBBY', 'YOUR OTHER HOBBY', 'LANGUAGE · LANGUAGE'],
+  quote: 'Building cool stuff, one idea at a time.',
+  origin: [
+    'Paragraph one. Who you are, where you study, what semester you are in, and where you are from.',
+    'Paragraph two. What you care about, internships you have done, and one thing you are proud of shipping.',
+    'Paragraph three. A concrete result with numbers (accuracy, users, time saved) makes this section land.',
+  ],
+  originCards: [
+    { label: 'Recently shipped', title: 'Your Best Project', body: 'One sentence on what it is and the result.' },
+    { label: 'Learning', title: 'Current Course', body: 'What you are studying right now and why.' },
+    { label: 'Building foundations', title: 'Next Skills', body: 'Be honest about what you are still learning.' },
+  ],
+  tiers: [
+    { tier: 'S', name: 'Proficient', skills: ['Skill One', 'Skill Two', 'Skill Three'] },
+    { tier: 'A', name: 'Intermediate', skills: ['Skill Four', 'Skill Five', 'Skill Six'] },
+    { tier: 'B', name: 'Learning / Basics', skills: ['Skill Seven', 'Skill Eight'] },
+  ],
+  assistantFacts: {
+    available: 'Yes, open to internships and entry-level roles. Use the Hire me button to reach out.',
+    education: 'B.E. in Your Branch, Your University. Add GPA and key coursework here.',
+  },
+  sideQuest: {
+    title: 'Your Side Quest',
+    kicker: 'Hobby',
+    body: 'A fun page about something you love: anime, music, books, games. Recruiters remember people, not just skills.',
+    items: ['Item one', 'Item two', 'Item three', 'Item four', 'Item five', 'Item six'],
+  },
+}
+
+export type Project = {
+  slug: string
+  eyebrow: string
+  title: string
+  blurb: string
+  stats: { value: string; label: string }[]
+  tags: string[]
+  live?: string
+  color: string
+  problem: string
+  built: string
+  tradeoffs: string
+}
+
+export const projects: Project[] = [
+  {
+    slug: 'project-one',
+    eyebrow: 'Capstone · Internship',
+    title: 'Project One',
+    blurb: 'Two sentences on what this does, who it is for, and what makes the engineering interesting.',
+    stats: [
+      { value: '0.85', label: 'Metric A' },
+      { value: '82%', label: 'Metric B' },
+      { value: '~$100k', label: 'Impact' },
+    ],
+    tags: ['Python', 'Scikit-learn', 'Streamlit'],
+    live: 'https://example.com',
+    color: '#c6ff3d',
+    problem: 'What problem were you solving, and for whom?',
+    built: 'What did you actually build? Mention the architecture and the key technical choices.',
+    tradeoffs: 'What trade-offs did you make, and what would you do differently?',
+  },
+  {
+    slug: 'project-two',
+    eyebrow: 'Full-stack · Auth',
+    title: 'Project Two',
+    blurb: 'A full-stack app with authentication and a database. Say what is special about it.',
+    stats: [
+      { value: '1,000', label: 'Users' },
+      { value: '0', label: 'Leaks' },
+      { value: 'SSR', label: 'Rendering' },
+    ],
+    tags: ['TypeScript', 'React', 'Postgres'],
+    live: 'https://example.com',
+    color: '#ff5d8f',
+    problem: 'Describe the problem and the constraints.',
+    built: 'Describe the build.',
+    tradeoffs: 'Describe the trade-offs.',
+  },
+  {
+    slug: 'project-three',
+    eyebrow: 'Personal tool',
+    title: 'Project Three',
+    blurb: 'A tool you made for yourself or a friend that solved a real, small problem well.',
+    stats: [
+      { value: '60', label: 'Tests' },
+      { value: '3', label: 'Roles' },
+      { value: '100%', label: 'Offline' },
+    ],
+    tags: ['TypeScript', 'MySQL', 'Vitest'],
+    live: 'https://example.com',
+    color: '#5db8ff',
+    problem: 'Describe the problem.',
+    built: 'Describe the build.',
+    tradeoffs: 'Describe the trade-offs.',
+  },
+  {
+    slug: 'project-four',
+    eyebrow: 'Algorithms · Visual',
+    title: 'Project Four',
+    blurb: 'A visual or interactive project that teaches an algorithm or concept.',
+    stats: [
+      { value: '5', label: 'Algorithms' },
+      { value: '60fps', label: 'Smooth' },
+      { value: '1', label: 'Embed widget' },
+    ],
+    tags: ['React', 'Three.js', 'Motion'],
+    live: 'https://example.com',
+    color: '#ffb23d',
+    problem: 'Describe the problem.',
+    built: 'Describe the build.',
+    tradeoffs: 'Describe the trade-offs.',
+  },
+  {
+    slug: 'project-five',
+    eyebrow: 'Terminal · OOP',
+    title: 'Project Five',
+    blurb: 'A smaller project that shows fundamentals: clean structure, validation, no frameworks.',
+    stats: [
+      { value: '3', label: 'Programs' },
+      { value: '100%', label: 'Validated' },
+      { value: 'C++17', label: 'Standard' },
+    ],
+    tags: ['C++', 'OOP'],
+    color: '#a78bfa',
+    problem: 'Describe the problem.',
+    built: 'Describe the build.',
+    tradeoffs: 'Describe the trade-offs.',
+  },
+]
