@@ -1,72 +1,119 @@
 import { useRef, useState } from 'react'
-import { projects, site } from '~/data/site'
+import { answerWithRag, type RagResult } from '~/utils/ragEngine'
 
-// A tiny rule-based assistant that only knows what is in src/data/site.ts.
-// Swap `answer()` for a call to your own API route if you want a real LLM later.
-function answer(q: string): string {
-  const s = q.toLowerCase()
-  if (/(avail|intern|hire|job|role|open to)/.test(s)) return site.assistantFacts.available
-  if (/(gpa|course|study|educat|college|univers|degree)/.test(s)) return site.assistantFacts.education
-  if (/(best|strongest|top|proud)/.test(s)) {
-    const p = projects[0]
-    return `${p.title}: ${p.blurb}`
-  }
-  const hit = projects.find((p) => s.includes(p.title.toLowerCase()) || s.includes(p.slug.replace(/-/g, ' ')))
-  if (hit) return `${hit.title}: ${hit.blurb} Built with ${hit.tags.join(', ')}.`
-  if (/(skill|tech|stack|language|tool)/.test(s))
-    return site.tiers.map((t) => `${t.name}: ${t.skills.join(', ')}`).join('. ') + '.'
-  if (/(project|built|made|work)/.test(s)) return `Projects: ${projects.map((p) => p.title).join(', ')}.`
-  if (/(51m|coding model|coding_model|huggingface|hugging face)/.test(s))
-    return "Coding_Model (51M) is Rohan's lightweight language model trained for code completion and local inference, published on Hugging Face at https://huggingface.co/2003Rohansinha/Coding_Model."
-  if (/(github|repo|code|repository)/.test(s))
-    return `Rohan's GitHub has 57+ public repositories across AI/ML, computer vision, and agentic workflows. Check it out at https://github.com/${site.github}`
-  if (/(contact|email|reach|linkedin)/.test(s)) return `Best way to reach him is the Hire me button, or the contact section below.`
-  return "I only know what's on this site: background, projects, skills and availability. Try one of the suggestions below."
+type Message = {
+  from: 'bot' | 'me'
+  text: string
+  sources?: RagResult['sources']
+  links?: RagResult['links']
 }
 
-type M = { from: 'bot' | 'me'; text: string }
-
 export function AskAssistant() {
-  const [log, setLog] = useState<M[]>([
+  const [log, setLog] = useState<Message[]>([
     {
       from: 'bot',
-      text: "Hi, I'm the assistant for this portfolio. I only know what's on the resume and in the projects. Ask me about background, projects, or availability.",
+      text: "Hi, I'm Rohan's AI assistant powered by a grounded RAG knowledge engine. I have full context on his LeetCode problem solving, Kaggle ML pipelines, 57+ GitHub repos, and models like the 51M Coding Model and DeepNova AI. Ask me anything!",
+      sources: [{ title: 'Portfolio RAG Index', category: 'background' }],
     },
   ])
   const [q, setQ] = useState('')
+  const [loading, setLoading] = useState(false)
   const box = useRef<HTMLDivElement>(null)
 
+  const scrollToBottom = () => {
+    setTimeout(() => {
+      if (box.current) {
+        box.current.scrollTo({ top: 99999, behavior: 'smooth' })
+      }
+    }, 40)
+  }
+
   const send = (text: string) => {
-    const t = text.trim()
-    if (!t) return
-    setLog((l) => [...l, { from: 'me', text: t }, { from: 'bot', text: answer(t) }])
+    const query = text.trim()
+    if (!query || loading) return
+
+    // 1. Append user message
+    setLog((prev) => [...prev, { from: 'me', text: query }])
     setQ('')
-    setTimeout(() => box.current?.scrollTo({ top: 99999, behavior: 'smooth' }), 30)
+    setLoading(true)
+    scrollToBottom()
+
+    // 2. Simulate realistic neural retrieval & generation latency (300ms)
+    setTimeout(() => {
+      const ragResult = answerWithRag(query)
+      setLog((prev) => [
+        ...prev,
+        {
+          from: 'bot',
+          text: ragResult.answer,
+          sources: ragResult.sources,
+          links: ragResult.links,
+        },
+      ])
+      setLoading(false)
+      scrollToBottom()
+    }, 320)
   }
 
   const suggestions = [
-    "What's the strongest project?",
-    'Is available for internships?',
-    'What are the skills?',
-    "What's the GPA and coursework?",
+    "What are Rohan's LeetCode & DSA strengths?",
+    'Tell me about the 51M Coding Model',
+    'What Kaggle & ML projects has Rohan built?',
+    'What is DeepNova AI?',
+    'Is Rohan open to internships or full-time roles?',
   ]
 
   return (
     <div className="chat">
       <div className="chat-head">
-        <span>assistant · <i>online</i></span>
-        <span>answers stay grounded</span>
+        <span>
+          assistant · <i>RAG online</i>
+        </span>
+        <span>grounded knowledge · LeetCode, Kaggle, GitHub</span>
       </div>
+
       <div className="log" ref={box}>
         {log.map((m, i) => (
-          <div key={i} className={`msg ${m.from}`}>{m.text}</div>
+          <div key={i} className={`msg ${m.from}`}>
+            <div style={{ whiteSpace: 'pre-line' }}>{m.text}</div>
+
+            {m.sources && m.sources.length > 0 && (
+              <div className="msg-sources">
+                {m.sources.map((s, idx) => (
+                  <span key={idx} className="source-tag" title={`Category: ${s.category}`}>
+                    Source: {s.title}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {m.links && m.links.length > 0 && (
+              <div className="msg-links">
+                {m.links.map((link, idx) => (
+                  <a key={idx} href={link.url} target="_blank" rel="noreferrer">
+                    {link.label} ↗
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         ))}
+
+        {loading && (
+          <div className="msg bot">
+            <span className="chat-loading">retrieving context & synthesizing response… ▍</span>
+          </div>
+        )}
       </div>
+
       <div className="suggest">
         {suggestions.map((s) => (
-          <button key={s} onClick={() => send(s)}>{s}</button>
+          <button key={s} onClick={() => send(s)} disabled={loading}>
+            {s}
+          </button>
         ))}
       </div>
+
       <form
         className="ask-row"
         onSubmit={(e) => {
@@ -74,8 +121,16 @@ export function AskAssistant() {
           send(q)
         }}
       >
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ask anything about the portfolio…" aria-label="Ask a question" />
-        <button type="submit">Ask</button>
+        <input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="Ask about LeetCode, Kaggle, GitHub repos, models, or hiring…"
+          aria-label="Ask a question"
+          disabled={loading}
+        />
+        <button type="submit" disabled={loading}>
+          {loading ? '…' : 'Ask'}
+        </button>
       </form>
     </div>
   )
