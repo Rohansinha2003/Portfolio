@@ -3,7 +3,6 @@ import { lazy, Suspense, useEffect, useState } from 'react'
 import { projects, site } from '~/data/site'
 import { GithubActivity } from '~/components/GithubActivity'
 import { AskAssistant } from '~/components/AskAssistant'
-import { Terminal } from '~/components/Terminal'
 
 export const Route = createFileRoute('/')({ component: Home })
 
@@ -181,8 +180,7 @@ function Home() {
       <section id="contact">
         <div className="wrap">
           <Chapter n="07" title="Let's Build Something" />
-          <Terminal />
-          <p className="sub" style={{ marginTop: 28 }}>An algorithm to crack, a product to ship, or the latest thing you are into. Drop a line.</p>
+          <p className="sub">An algorithm to crack, a product to ship, or the latest thing you are into. Drop a line.</p>
           <div className="socials">
             <a className="btn" href={`https://github.com/${site.github}`} target="_blank" rel="noreferrer">GitHub</a>
             <a className="btn" href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>

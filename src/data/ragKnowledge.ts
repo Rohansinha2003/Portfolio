@@ -185,7 +185,7 @@ export const KNOWLEDGE_BASE: KnowledgeChunk[] = [
     category: 'contact',
     tags: ['contact', 'email', 'socials', 'twitter', 'x', 'linkedin', 'huggingface', 'github', 'kaggle', 'leetcode'],
     content:
-      'Email: 2003rohansinha@gmail.com. GitHub: https://github.com/Rohansinha2003. LinkedIn: https://www.linkedin.com/in/rohan-sinhaa/. LeetCode: https://leetcode.com/u/rohan_sinha2003/. Kaggle: https://www.kaggle.com/rohansinha2003. X / Twitter: https://x.com/RohanSinhaAI. Hugging Face: https://huggingface.co/2003Rohansinha. Visitors can also decrypt his contact email directly in the terminal widget on the homepage.',
+      'Email: 2003rohansinha@gmail.com. GitHub: https://github.com/Rohansinha2003. LinkedIn: https://www.linkedin.com/in/rohan-sinhaa/. LeetCode: https://leetcode.com/u/rohan_sinha2003/. Kaggle: https://www.kaggle.com/rohansinha2003. X / Twitter: https://x.com/RohanSinhaAI. Hugging Face: https://huggingface.co/2003Rohansinha.',
     links: [
       { label: 'Email Rohan', url: 'mailto:2003rohansinha@gmail.com' },
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rohan-sinhaa/' },
