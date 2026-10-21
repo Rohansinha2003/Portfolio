@@ -18,7 +18,7 @@ export const site = {
   tagline:
     'Building intelligent systems, pushing the boundaries of AI, and engineering the future—one model at a time.', // [PLACEHOLDER]
   stats: [
-    { value: 'Does it matter?', label: 'Avg CGPA' },
+    { value: 'Does it matter?', label: 'CGPA' },
     { value: '8+1', label: 'Projects shipped' },
   ],
   marquee: ['ENGINEER', 'PROBLEM SOLVER', 'Machine learning', 'Deep learning', 'Python'],
@@ -37,11 +37,45 @@ export const site = {
     { label: 'Learning', title: 'Deeplearning', body: 'Currently mastering deep learning, LLMs, and agentic AI to build intelligent systems that solve real-world problems.' },
     { label: 'Building foundations', title: 'Production level AI', body: 'Learning to deploy production level AI systems.' },
   ],
+
   tiers: [
-    { tier: 'S', name: 'Proficient', skills: ['Skill One', 'Skill Two', 'Skill Three'] },
-    { tier: 'A', name: 'Intermediate', skills: ['Skill Four', 'Skill Five', 'Skill Six'] },
-    { tier: 'B', name: 'Learning / Basics', skills: ['Skill Seven', 'Skill Eight'] },
+    {
+      tier: 'S',
+      name: 'Proficient',
+      skills: [
+        'C++ & DSA',
+        'Python',
+        'Machine Learning',
+        'Deep Learning',
+        'LLM Development',
+        'Git & GitHub',
+      ],
+    },
+    {
+      tier: 'A',
+      name: 'Intermediate',
+      skills: [
+        'Generative AI',
+        'RAG & Vector Databases',
+        'AI Agents & Tool Calling',
+        'TensorFlow & OpenCV',
+        'React & Next.js',
+        'Node.js & Express.js',
+        'MongoDB & PostgreSQL',
+      ],
+    },
+    {
+      tier: 'B',
+      name: 'Learning / Basics',
+      skills: [
+        'MCP & Agentic Workflows',
+        'LLM Fine-Tuning',
+        'Model Deployment & MLOps',
+        'Cloud & AI Infrastructure',
+      ],
+    },
   ],
+
   assistantFacts: {
     available: 'Yes, open to internships and entry-level roles. Use the Hire me button to reach out.',
     education: 'B.E. in Your Branch, Your University. Add GPA and key coursework here.',

@@ -96,7 +96,8 @@ function Home() {
       <section id="skills">
         <div className="wrap">
           <Chapter n="02" title="Power Levels" />
-          <p className="sub">Honest tiers: what you lean on daily, what you are comfortable with, and what you are still learning.</p>
+          <p className="sub"> My skills, honestly ranked — from the technologies I use to build AI projects like DeepNova and my coding model, to the tools I’m mastering and the concepts I’m exploring next. </p>
+
           {site.tiers.map((t) => (
             <div className="tier" key={t.tier}>
               <div className="letter">{t.tier}</div>
