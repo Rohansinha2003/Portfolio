@@ -118,14 +118,28 @@ export function GithubActivity() {
     const u = encodeURIComponent(site.github)
     Promise.all([
       fetch(`https://api.github.com/users/${u}`).then((r) => (r.ok ? r.json() : Promise.reject(r.status))),
-      fetch(`https://api.github.com/users/${u}/repos?sort=pushed&per_page=30`).then((r) =>
+      fetch(`https://api.github.com/users/${u}/repos?sort=pushed&per_page=50`).then((r) =>
         r.ok ? r.json() : Promise.reject(r.status),
       ),
     ])
       .then(([usr, rs]: [User, Repo[]]) => {
         if (off) return
         setUser(usr)
-        setRepos(rs.filter((r) => !r.fork).slice(0, 6))
+        const nonForkAndNonProfile = rs.filter(
+          (r) =>
+            !r.fork &&
+            r.name.toLowerCase() !== site.github.toLowerCase() &&
+            r.name.toLowerCase() !== 'rohansinha2003',
+        )
+        const chestRepo = nonForkAndNonProfile.find((r) => r.name.toLowerCase().includes('chest'))
+        let selected: Repo[]
+        if (chestRepo) {
+          const others = nonForkAndNonProfile.filter((r) => r.id !== chestRepo.id)
+          selected = [others[0], others[1], chestRepo, others[2], others[3], others[4]].filter(Boolean)
+        } else {
+          selected = nonForkAndNonProfile.slice(0, 6)
+        }
+        setRepos(selected)
         setIsLive(true)
       })
       .catch(() => {
