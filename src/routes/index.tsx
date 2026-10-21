@@ -143,6 +143,7 @@ function Home() {
               <div className="row-btns" style={{ marginTop: 22 }}>
                 <Link className="btn primary" to="/projects/$slug" params={{ slug: p.slug }}>Case study →</Link>
                 {p.live && <a className="btn" href={p.live} target="_blank" rel="noreferrer">Live site ↗</a>}
+                {p.github && <a className="btn" href={p.github} target="_blank" rel="noreferrer">GitHub repo ↗</a>}
               </div>
             </div>
             <div className="dstats" style={{ alignContent: 'center' }}>

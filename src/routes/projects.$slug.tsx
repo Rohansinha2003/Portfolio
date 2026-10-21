@@ -37,11 +37,18 @@ function CaseStudy() {
         <h3>The problem</h3><p>{p.problem}</p>
         <h3>What I built</h3><p>{p.built}</p>
         <h3>Trade-offs</h3><p>{p.tradeoffs}</p>
-        {p.live && (
-          <div className="row-btns" style={{ marginTop: 32 }}>
-            <a className="btn primary" href={p.live} target="_blank" rel="noreferrer">Live site ↗</a>
-          </div>
-        )}
+        <div className="row-btns" style={{ marginTop: 32 }}>
+          {p.live && (
+            <a className="btn primary" href={p.live} target="_blank" rel="noreferrer">
+              Live site ↗
+            </a>
+          )}
+          {p.github && (
+            <a className="btn" href={p.github} target="_blank" rel="noreferrer">
+              GitHub repo ↗
+            </a>
+          )}
+        </div>
       </div>
     </main>
   )

@@ -16,7 +16,9 @@ function answer(q: string): string {
   if (/(skill|tech|stack|language|tool)/.test(s))
     return site.tiers.map((t) => `${t.name}: ${t.skills.join(', ')}`).join('. ') + '.'
   if (/(project|built|made|work)/.test(s)) return `Projects: ${projects.map((p) => p.title).join(', ')}.`
-  if (/(contact|email|reach|linkedin|github)/.test(s)) return `Best way to reach him is the Hire me button, or the contact section below.`
+  if (/(github|repo|code|repository)/.test(s))
+    return `Rohan's GitHub has 57+ public repositories across AI/ML, computer vision, and agentic workflows. Check it out at https://github.com/${site.github}`
+  if (/(contact|email|reach|linkedin)/.test(s)) return `Best way to reach him is the Hire me button, or the contact section below.`
   return "I only know what's on this site: background, projects, skills and availability. Try one of the suggestions below."
 }
 
