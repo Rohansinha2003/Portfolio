@@ -113,7 +113,9 @@ function Home() {
       <section id="github">
         <div className="wrap">
           <Chapter n="03" title="Live Code Activity" />
-          <p className="sub">Not hardcoded. Pulled live from the GitHub API when the page loads, so it is what you actually shipped.</p>
+          <p className="sub">
+            Real-time telemetry pulled directly from the GitHub API — tracking active repositories, open-source AI models, algorithmic problem solving, and ongoing engineering commits.
+          </p>
           <GithubActivity />
         </div>
       </section>

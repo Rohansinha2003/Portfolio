@@ -150,6 +150,49 @@ export function GithubActivity() {
           </a>
         ))}
       </div>
+
+      <div className="gh-streak-wrap">
+        <div className="streak-header">
+          <div>
+            <h4>Continuous Shipping Streak</h4>
+            <span className="muted">Live contribution metrics & streaks across all repositories</span>
+          </div>
+          <a
+            className="btn"
+            href={`https://github.com/${site.github}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub Profile →
+          </a>
+        </div>
+        <div className="streak-cards">
+          <a
+            href={`https://github.com/${site.github}`}
+            target="_blank"
+            rel="noreferrer"
+            className="streak-card"
+          >
+            <img
+              src={`https://github-readme-streak-stats.herokuapp.com/?user=${site.github}&theme=dark&background=131315&border=222226&stroke=c6ff3d&ring=c6ff3d&fire=c6ff3d&currStreakNum=f4f1ea&sideNums=f4f1ea&currStreakLabel=c6ff3d&sideLabels=8d8a82&dates=8d8a82`}
+              alt={`${site.firstName}'s GitHub Contribution Streak`}
+              loading="lazy"
+            />
+          </a>
+          <a
+            href={`https://github.com/${site.github}`}
+            target="_blank"
+            rel="noreferrer"
+            className="streak-card"
+          >
+            <img
+              src={`https://github-readme-stats.vercel.app/api?username=${site.github}&show_icons=true&bg_color=131315&border_color=222226&title_color=c6ff3d&text_color=c8c5bd&icon_color=c6ff3d`}
+              alt={`${site.firstName}'s GitHub Overall Stats`}
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </div>
     </>
   )
 }
