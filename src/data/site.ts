@@ -80,12 +80,21 @@ export const site = {
     available: 'Yes, open to internships and entry-level roles. Use the Hire me button to reach out.',
     education: 'B.E. in Your Branch, Your University. Add GPA and key coursework here.',
   },
+
   sideQuest: {
-    title: 'Your Side Quest',
-    kicker: 'Hobby',
-    body: 'A fun page about something you love: anime, music, books, games. Recruiters remember people, not just skills.',
-    items: ['Item one', 'Item two', 'Item three', 'Item four', 'Item five', 'Item six'],
+    title: 'Beyond the Code',
+    kicker: 'Side Quest',
+    body: 'When I’m not working, I’m experimenting with AI models, exploring deep learning, solving challenging DSA problems, and turning ambitious ideas into real projects. I believe curiosity is the real engine behind innovation.',
+    items: [
+      'Building DeepNova AI',
+      'Training My Own Coding Model',
+      'Solving LeetCode Problems',
+      'Exploring LLMs & AI Agents',
+      'Experimenting with New Technologies',
+      'Turning Ideas into Projects',
+    ],
   },
+
 }
 
 export type Project = {
