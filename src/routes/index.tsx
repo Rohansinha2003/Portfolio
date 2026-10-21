@@ -187,6 +187,9 @@ function Home() {
             <a className="btn" href={`https://github.com/${site.github}`} target="_blank" rel="noreferrer">GitHub</a>
             <a className="btn" href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
             <a className="btn" href={site.x} target="_blank" rel="noreferrer">X</a>
+            {site.huggingface && (
+              <a className="btn" href={site.huggingface} target="_blank" rel="noreferrer">Hugging Face</a>
+            )}
           </div>
         </div>
       </section>

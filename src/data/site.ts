@@ -8,18 +8,20 @@ export const site = {
   firstName: 'Rohan',
   lastName: 'Sinha',
   handle: 'rohansinha',
-  role: 'ML Engineer', // [PLACEHOLDER]
-  city: 'Bengalore',
-  email: '2003rohansinha@gmail.com', // [PLACEHOLDER]
-  github: 'Rohansinha2003', // [PLACEHOLDER] used for the live GitHub section
+  role: 'ML Engineer',
+  city: 'Bangalore',
+  email: '2003rohansinha@gmail.com',
+  github: 'Rohansinha2003',
   linkedin: 'https://www.linkedin.com/in/rohan-sinhaa/',
   x: 'https://x.com/RohanSinhaAI',
+  huggingface: 'https://huggingface.co/2003Rohansinha',
   resumeUrl: '/resume',
   tagline:
-    'Building intelligent systems, pushing the boundaries of AI, and engineering the future—one model at a time.', // [PLACEHOLDER]
+    'Building intelligent systems, pushing the boundaries of AI, and engineering the future—one model at a time.',
   stats: [
     { value: 'Does it matter?', label: 'CGPA' },
     { value: '8+1', label: 'Projects shipped' },
+    { value: '51M', label: 'Model Params' },
   ],
   marquee: ['ENGINEER', 'PROBLEM SOLVER', 'Machine learning', 'Deep learning', 'Python'],
   quote: 'Building cool stuff, one idea at a time.',
@@ -34,7 +36,7 @@ export const site = {
 
   originCards: [
     { label: 'Recently shipped', title: 'Deepnova AI', body: 'DeepNova AI is my vision to make artificial intelligence and deep learning accessible to everyone through intuitive learning experiences, innovative AI projects, and real-world solutions.' },
-    { label: 'Learning', title: 'Deeplearning', body: 'Currently mastering deep learning, LLMs, and agentic AI to build intelligent systems that solve real-world problems.' },
+    { label: 'Learning', title: 'Deep Learning', body: 'Currently mastering deep learning, LLMs, and agentic AI to build intelligent systems that solve real-world problems.' },
     { label: 'Building foundations', title: 'Production level AI', body: 'Learning to deploy production level AI systems.' },
   ],
 

@@ -13,7 +13,7 @@ function Resume() {
         <Link to="/" className="back">← Back to portfolio</Link>
         <h1>Résumé</h1>
         <p>
-          Put your PDF at <code>public/resume.pdf</code> and it will be linked below.
+          Download or preview Rohan Sinha's official engineering résumé below, covering machine learning architectures, models shipped, and technical background.
         </p>
         <div className="row-btns" style={{ marginTop: 24 }}>
           <a className="btn primary" href="/resume.pdf" target="_blank" rel="noreferrer">Open PDF ↗</a>
