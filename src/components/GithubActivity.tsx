@@ -81,6 +81,33 @@ const FALLBACK_REPOS: Repo[] = [
   },
 ]
 
+const REPO_DESCRIPTIONS: Record<string, string> = {
+  Portfolio: 'Interactive personal engineering portfolio showcasing AI/ML projects, 3D graphics, and live GitHub telemetry.',
+  ML_Tuitor: 'Machine learning tutoring and guidance platform with step-by-step algorithms and code implementations.',
+  LEGALISH: 'AI-assisted legal document parsing, contract reasoning, and regulatory analysis workflow system.',
+  deepnova: 'Educational AI platform democratizing machine learning through intuitive visual modules and tools.',
+  ResearchOS: 'Intelligent research operating system for scientific paper discovery, indexing, and synthesis.',
+  FraudShield: 'Real-time financial fraud detection pipeline utilizing machine learning classification models.',
+  Url_shortener: 'High-performance URL shortening and redirect service with analytics and link tracking.',
+  Email_System: 'Full-stack automated email dispatch and notification service with dynamic templates.',
+  'four-pillars': 'Interactive application demonstrating the foundational pillars of Object-Oriented Programming.',
+  'Cross-model-review': 'Benchmarking utility comparing prompt responses and metrics across different LLM architectures.',
+  Chest_X_ray: 'Deep learning computer vision system detecting pulmonary pathologies from chest radiographs using CNNs.',
+  Cognix_Agent: 'Autonomous AI agent system implementing the ReAct loop with multi-step reasoning and tool execution.',
+  'RAG-Project': 'Retrieval-augmented generation pipeline with semantic vector search, chunking, and grounded citations.',
+  'finance-buddy': 'Smart personal finance and budgeting dashboard developed for HackIndia Spark 2025.',
+  'My-LeetCode-Problems': 'Curated Data Structures and Algorithms solutions in C++ covering LeetCode problem patterns.',
+  DSA: 'Comprehensive Data Structures & Algorithms implementations, complexity notes, and C++ problem sets.',
+  Rohansinha2003: 'GitHub profile hub, technical background overview, and open-source project directory.',
+  'Retail-Sales-Performance-Dashboard': 'Interactive retail sales performance dashboard with real-time KPI visualization.',
+  'Covid19-Trend-Analysis': 'Data analytics and epidemiological trend modeling visualizing pandemic spread patterns.',
+  'Customer-Churn-Prediction-Model-': 'Customer churn classification model predicting churn probability with scikit-learn.',
+  'End-to-End-ML-Pipeline-Customer-Churn-Prediction-': 'Production ML pipeline from raw data preprocessing to model training and evaluation.',
+  'EDA-Dashboard-Interactive-Data-Analysis-': 'Interactive exploratory data analysis dashboard for rapid dataset profiling.',
+  'NLP-Sentiment-Analysis-': 'Natural language processing model for text sentiment classification and semantic analysis.',
+  Hand_detection: 'Real-time hand gesture tracking and computer vision pipeline built with OpenCV and Python.',
+}
+
 export function GithubActivity() {
   const [repos, setRepos] = useState<Repo[] | null>(null)
   const [user, setUser] = useState<User | null>(null)
@@ -138,17 +165,26 @@ export function GithubActivity() {
         </p>
       )}
       <div className="gh-grid">
-        {displayRepos.map((r) => (
-          <a className="repo" key={r.id} href={r.html_url} target="_blank" rel="noreferrer">
-            <h4>{r.name}</h4>
-            <p>{r.description ?? 'No description yet.'}</p>
-            <div className="meta">
-              {r.language && <span>{r.language}</span>}
-              <span>★ {r.stargazers_count}</span>
-              <span>pushed {new Date(r.pushed_at).toLocaleDateString()}</span>
-            </div>
-          </a>
-        ))}
+        {displayRepos.map((r) => {
+          const desc =
+            (r.description && r.description.trim() !== 'Config files for my GitHub profile.'
+              ? r.description
+              : null) ||
+            REPO_DESCRIPTIONS[r.name] ||
+            'Active engineering repository by Rohan Sinha.'
+
+          return (
+            <a className="repo" key={r.id} href={r.html_url} target="_blank" rel="noreferrer">
+              <h4>{r.name}</h4>
+              <p>{desc}</p>
+              <div className="meta">
+                {r.language && <span>{r.language}</span>}
+                <span>★ {r.stargazers_count}</span>
+                <span>pushed {new Date(r.pushed_at).toLocaleDateString()}</span>
+              </div>
+            </a>
+          )
+        })}
       </div>
 
       <div className="gh-streak-wrap">
