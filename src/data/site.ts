@@ -19,19 +19,23 @@ export const site = {
     'Building intelligent systems, pushing the boundaries of AI, and engineering the future—one model at a time.', // [PLACEHOLDER]
   stats: [
     { value: 'Does it matter?', label: 'Avg CGPA' },
-    { value: '3+1', label: 'Projects shipped' },
+    { value: '8+1', label: 'Projects shipped' },
   ],
-  marquee: ['ENGINEER', 'PROBLEM SOLVER', 'YOUR HOBBY', 'YOUR OTHER HOBBY', 'LANGUAGE · LANGUAGE'],
+  marquee: ['ENGINEER', 'PROBLEM SOLVER', 'Machine learning', 'Deep learning', 'Python'],
   quote: 'Building cool stuff, one idea at a time.',
+
   origin: [
-    'Paragraph one. Who you are, where you study, what semester you are in, and where you are from.',
-    'Paragraph two. What you care about, internships you have done, and one thing you are proud of shipping.',
-    'Paragraph three. A concrete result with numbers (accuracy, users, time saved) makes this section land.',
+    "I'm Rohan Sinha, an AI/ML developer from Bangalore, India, with an engineering background and a strong passion for building intelligent systems. My journey revolves around deep learning, large language models, and turning ideas into working AI products.",
+
+    "I enjoy exploring how machines learn, reason, and solve real-world problems. Through DeepNova, my AI-focused initiative, I work on making complex machine learning concepts easier to understand and building practical AI solutions. I'm also proud of developing Coding_Model, a lightweight language model designed to explore the possibilities of locally running AI.",
+
+    "From experimenting with compact language models to building AI projects such as DeepNova and a chest X-ray analysis system, I focus on learning by building, testing, and improving. My goal is to create efficient, accessible AI systems that make a meaningful impact, one experiment at a time."
   ],
+
   originCards: [
-    { label: 'Recently shipped', title: 'Your Best Project', body: 'One sentence on what it is and the result.' },
-    { label: 'Learning', title: 'Current Course', body: 'What you are studying right now and why.' },
-    { label: 'Building foundations', title: 'Next Skills', body: 'Be honest about what you are still learning.' },
+    { label: 'Recently shipped', title: 'Deepnova AI', body: 'DeepNova AI is my vision to make artificial intelligence and deep learning accessible to everyone through intuitive learning experiences, innovative AI projects, and real-world solutions.' },
+    { label: 'Learning', title: 'Deeplearning', body: 'Currently mastering deep learning, LLMs, and agentic AI to build intelligent systems that solve real-world problems.' },
+    { label: 'Building foundations', title: 'Production level AI', body: 'Learning to deploy production level AI systems.' },
   ],
   tiers: [
     { tier: 'S', name: 'Proficient', skills: ['Skill One', 'Skill Two', 'Skill Three'] },
