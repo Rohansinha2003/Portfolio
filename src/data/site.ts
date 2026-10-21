@@ -14,6 +14,8 @@ export const site = {
   github: 'Rohansinha2003',
   linkedin: 'https://www.linkedin.com/in/rohan-sinhaa/',
   x: 'https://x.com/RohanSinhaAI',
+  leetcode: 'https://leetcode.com/u/rohan_sinha2003/',
+  kaggle: 'https://www.kaggle.com/rohansinha2003',
   huggingface: 'https://huggingface.co/2003Rohansinha',
   resumeUrl: '/resume',
   tagline:

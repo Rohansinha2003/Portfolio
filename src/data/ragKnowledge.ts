@@ -17,6 +17,7 @@ export const KNOWLEDGE_BASE: KnowledgeChunk[] = [
     content:
       'Rohan has solved extensive algorithmic problems on LeetCode primarily using modern C++ (C++17/C++20). His core strengths include Dynamic Programming, Graph Algorithms (BFS, DFS, Dijkstra), Trees, Sliding Window, Two Pointers, Heaps, and Backtracking. He maintains clean, modular implementations and automated sync of his solutions in his GitHub repository My-LeetCode-Problems and DSA.',
     links: [
+      { label: 'LeetCode Profile', url: 'https://leetcode.com/u/rohan_sinha2003/' },
       { label: 'My-LeetCode-Problems GitHub', url: 'https://github.com/Rohansinha2003/My-LeetCode-Problems' },
       { label: 'DSA Repository', url: 'https://github.com/Rohansinha2003/DSA' },
     ],
@@ -42,6 +43,7 @@ export const KNOWLEDGE_BASE: KnowledgeChunk[] = [
     content:
       'On Kaggle and through independent data science work, Rohan has developed applied machine learning pipelines. His notable projects include: 1) End-to-End ML Pipeline Customer Churn Prediction (feature engineering, classification with Random Forests and Gradient Boosting), 2) COVID-19 Trend Analysis (time-series modeling and epidemiological data curves), and 3) Interactive EDA Dashboard (profiling datasets, distribution checks, and feature correlation).',
     links: [
+      { label: 'Kaggle Profile', url: 'https://www.kaggle.com/rohansinha2003' },
       { label: 'Customer Churn Model Repo', url: 'https://github.com/Rohansinha2003/Customer-Churn-Prediction-Model-' },
       { label: 'Covid19 Trend Analysis Repo', url: 'https://github.com/Rohansinha2003/Covid19-Trend-Analysis' },
       { label: 'EDA Dashboard Repo', url: 'https://github.com/Rohansinha2003/EDA-Dashboard-Interactive-Data-Analysis-' },
@@ -181,12 +183,14 @@ export const KNOWLEDGE_BASE: KnowledgeChunk[] = [
     id: 'contact-details',
     title: 'Contact Information & Social Profiles',
     category: 'contact',
-    tags: ['contact', 'email', 'socials', 'twitter', 'x', 'linkedin', 'huggingface', 'github'],
+    tags: ['contact', 'email', 'socials', 'twitter', 'x', 'linkedin', 'huggingface', 'github', 'kaggle', 'leetcode'],
     content:
-      'Email: 2003rohansinha@gmail.com. GitHub: https://github.com/Rohansinha2003. LinkedIn: https://www.linkedin.com/in/rohan-sinhaa/. X / Twitter: https://x.com/RohanSinhaAI. Hugging Face: https://huggingface.co/2003Rohansinha. Visitors can also decrypt his contact email directly in the terminal widget on the homepage.',
+      'Email: 2003rohansinha@gmail.com. GitHub: https://github.com/Rohansinha2003. LinkedIn: https://www.linkedin.com/in/rohan-sinhaa/. LeetCode: https://leetcode.com/u/rohan_sinha2003/. Kaggle: https://www.kaggle.com/rohansinha2003. X / Twitter: https://x.com/RohanSinhaAI. Hugging Face: https://huggingface.co/2003Rohansinha. Visitors can also decrypt his contact email directly in the terminal widget on the homepage.',
     links: [
       { label: 'Email Rohan', url: 'mailto:2003rohansinha@gmail.com' },
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rohan-sinhaa/' },
+      { label: 'LeetCode', url: 'https://leetcode.com/u/rohan_sinha2003/' },
+      { label: 'Kaggle', url: 'https://www.kaggle.com/rohansinha2003' },
       { label: 'X (Twitter)', url: 'https://x.com/RohanSinhaAI' },
       { label: 'Hugging Face', url: 'https://huggingface.co/2003Rohansinha' },
     ],
