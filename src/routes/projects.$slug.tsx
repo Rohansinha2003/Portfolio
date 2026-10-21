@@ -38,9 +38,14 @@ function CaseStudy() {
         <h3>What I built</h3><p>{p.built}</p>
         <h3>Trade-offs</h3><p>{p.tradeoffs}</p>
         <div className="row-btns" style={{ marginTop: 32 }}>
-          {p.live && (
+          {p.live && !p.huggingface && (
             <a className="btn primary" href={p.live} target="_blank" rel="noreferrer">
               Live site ↗
+            </a>
+          )}
+          {p.huggingface && (
+            <a className="btn primary" href={p.huggingface} target="_blank" rel="noreferrer">
+              Hugging Face Model ↗
             </a>
           )}
           {p.github && (

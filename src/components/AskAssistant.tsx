@@ -16,6 +16,8 @@ function answer(q: string): string {
   if (/(skill|tech|stack|language|tool)/.test(s))
     return site.tiers.map((t) => `${t.name}: ${t.skills.join(', ')}`).join('. ') + '.'
   if (/(project|built|made|work)/.test(s)) return `Projects: ${projects.map((p) => p.title).join(', ')}.`
+  if (/(51m|coding model|coding_model|huggingface|hugging face)/.test(s))
+    return "Coding_Model (51M) is Rohan's lightweight language model trained for code completion and local inference, published on Hugging Face at https://huggingface.co/2003Rohansinha/Coding_Model."
   if (/(github|repo|code|repository)/.test(s))
     return `Rohan's GitHub has 57+ public repositories across AI/ML, computer vision, and agentic workflows. Check it out at https://github.com/${site.github}`
   if (/(contact|email|reach|linkedin)/.test(s)) return `Best way to reach him is the Hire me button, or the contact section below.`

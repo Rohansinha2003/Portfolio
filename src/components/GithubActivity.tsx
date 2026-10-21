@@ -18,7 +18,19 @@ const FALLBACK_USER: User = {
   followers: 9,
 }
 
+const CODING_MODEL_REPO: Repo = {
+  id: 200301,
+  name: 'Coding_Model (51M)',
+  description: '51M parameter lightweight language model trained for code completion and local inference, published on Hugging Face.',
+  html_url: 'https://huggingface.co/2003Rohansinha/Coding_Model',
+  stargazers_count: 0,
+  language: 'PyTorch · HuggingFace',
+  pushed_at: '2026-10-21T00:00:00Z',
+  fork: false,
+}
+
 const FALLBACK_REPOS: Repo[] = [
+  CODING_MODEL_REPO,
   {
     id: 1,
     name: 'deepnova',
@@ -135,9 +147,16 @@ export function GithubActivity() {
         let selected: Repo[]
         if (chestRepo) {
           const others = nonForkAndNonProfile.filter((r) => r.id !== chestRepo.id)
-          selected = [others[0], others[1], chestRepo, others[2], others[3], others[4]].filter(Boolean)
+          selected = [
+            others[0],
+            CODING_MODEL_REPO,
+            chestRepo,
+            others[1],
+            others[2],
+            others[3],
+          ].filter(Boolean)
         } else {
-          selected = nonForkAndNonProfile.slice(0, 6)
+          selected = [CODING_MODEL_REPO, ...nonForkAndNonProfile.slice(0, 5)]
         }
         setRepos(selected)
         setIsLive(true)

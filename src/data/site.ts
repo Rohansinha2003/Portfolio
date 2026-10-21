@@ -106,6 +106,7 @@ export type Project = {
   tags: string[]
   live?: string
   github?: string
+  huggingface?: string
   color: string
   problem: string
   built: string
@@ -130,6 +131,24 @@ export const projects: Project[] = [
     problem: 'Complex AI and machine learning concepts are often obscured by dense theoretical math and fragmented documentation, creating high barriers for learners and builders.',
     built: 'Engineered an accessible AI knowledge and solution space featuring guided learning modules, visual conceptual demos, and real-world machine learning solutions.',
     tradeoffs: 'Focused on delivering fast, responsive browser-first experiences with clean client interactions rather than requiring heavy GPU infrastructure for every visitor.',
+  },
+  {
+    slug: 'coding-model-51m',
+    eyebrow: 'Lightweight LLM · PyTorch',
+    title: 'Coding_Model (51M)',
+    blurb: 'A 51M parameter compact language model pre-trained and fine-tuned for code completion, syntax reasoning, and edge deployment.',
+    stats: [
+      { value: '51M', label: 'Parameters' },
+      { value: 'PyTorch', label: 'Framework' },
+      { value: 'HuggingFace', label: 'Weights' },
+    ],
+    tags: ['Python', 'PyTorch', 'Transformers', 'LLM', 'Hugging Face'],
+    live: 'https://huggingface.co/2003Rohansinha/Coding_Model',
+    huggingface: 'https://huggingface.co/2003Rohansinha/Coding_Model',
+    color: '#38bdf8',
+    problem: 'Running standard multi-billion parameter code models requires expensive GPUs, introduces network latency, and exposes privacy risks for local development workflows.',
+    built: 'Trained a 51M parameter transformer causal language model from scratch. Optimized tokenization using Byte-Pair Encoding (BPE), implemented rotary position embeddings (RoPE), and published model weights and tokenizer configs on Hugging Face.',
+    tradeoffs: 'Optimized parameter budget for fast CPU/edge inference and code syntax completion rather than general conversational knowledge.',
   },
   {
     slug: 'chest-x-ray',

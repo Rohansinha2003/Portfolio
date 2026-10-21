@@ -144,7 +144,8 @@ function Home() {
               <div className="chips">{p.tags.map((t) => <span className="chip" key={t}>{t}</span>)}</div>
               <div className="row-btns" style={{ marginTop: 22 }}>
                 <Link className="btn primary" to="/projects/$slug" params={{ slug: p.slug }}>Case study →</Link>
-                {p.live && <a className="btn" href={p.live} target="_blank" rel="noreferrer">Live site ↗</a>}
+                {p.live && !p.huggingface && <a className="btn" href={p.live} target="_blank" rel="noreferrer">Live site ↗</a>}
+                {p.huggingface && <a className="btn" href={p.huggingface} target="_blank" rel="noreferrer">Hugging Face ↗</a>}
                 {p.github && <a className="btn" href={p.github} target="_blank" rel="noreferrer">GitHub repo ↗</a>}
               </div>
             </div>
