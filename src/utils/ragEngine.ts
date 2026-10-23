@@ -71,6 +71,7 @@ export function retrieveChunks(query: string, topK = 3): { chunk: KnowledgeChunk
 
     // Category boost
     if (rawLower.includes('leetcode') && chunk.category === 'leetcode') score += 20
+    if ((rawLower.includes('gfg') || rawLower.includes('geeksforgeeks')) && chunk.category === 'leetcode') score += 20
     if (rawLower.includes('dsa') && chunk.category === 'leetcode') score += 20
     if (rawLower.includes('kaggle') && chunk.category === 'kaggle') score += 20
     if (rawLower.includes('github') && chunk.category === 'github') score += 15

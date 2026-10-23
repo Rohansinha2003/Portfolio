@@ -11,13 +11,14 @@ export const KNOWLEDGE_BASE: KnowledgeChunk[] = [
   // ─── LEETCODE & DSA ───
   {
     id: 'leetcode-dsa-profile',
-    title: 'LeetCode Problem Solving & Data Structures in C++',
+    title: 'LeetCode & GeeksforGeeks Problem Solving & Data Structures in C++',
     category: 'leetcode',
-    tags: ['leetcode', 'dsa', 'c++', 'algorithms', 'data structures', 'problem solving', 'competitive programming'],
+    tags: ['leetcode', 'gfg', 'geeksforgeeks', 'dsa', 'c++', 'algorithms', 'data structures', 'problem solving', 'competitive programming'],
     content:
-      'Rohan has solved extensive algorithmic problems on LeetCode primarily using modern C++ (C++17/C++20). His core strengths include Dynamic Programming, Graph Algorithms (BFS, DFS, Dijkstra), Trees, Sliding Window, Two Pointers, Heaps, and Backtracking. He maintains clean, modular implementations and automated sync of his solutions in his GitHub repository My-LeetCode-Problems and DSA.',
+      'Rohan has solved extensive algorithmic problems on LeetCode and GeeksforGeeks primarily using modern C++ (C++17/C++20). His core strengths include Dynamic Programming, Graph Algorithms (BFS, DFS, Dijkstra), Trees, Sliding Window, Two Pointers, Heaps, and Backtracking. He maintains clean, modular implementations and automated sync of his solutions in his GitHub repository My-LeetCode-Problems and DSA.',
     links: [
       { label: 'LeetCode Profile', url: 'https://leetcode.com/u/rohan_sinha2003/' },
+      { label: 'GeeksforGeeks Profile', url: 'https://www.geeksforgeeks.org/profile/2003rohansinha?tab=activity' },
       { label: 'My-LeetCode-Problems GitHub', url: 'https://github.com/Rohansinha2003/My-LeetCode-Problems' },
       { label: 'DSA Repository', url: 'https://github.com/Rohansinha2003/DSA' },
     ],
@@ -183,13 +184,14 @@ export const KNOWLEDGE_BASE: KnowledgeChunk[] = [
     id: 'contact-details',
     title: 'Contact Information & Social Profiles',
     category: 'contact',
-    tags: ['contact', 'email', 'socials', 'twitter', 'x', 'linkedin', 'huggingface', 'github', 'kaggle', 'leetcode'],
+    tags: ['contact', 'email', 'socials', 'twitter', 'x', 'linkedin', 'huggingface', 'github', 'kaggle', 'leetcode', 'gfg', 'geeksforgeeks'],
     content:
-      'Email: 2003rohansinha@gmail.com. GitHub: https://github.com/Rohansinha2003. LinkedIn: https://www.linkedin.com/in/rohan-sinhaa/. LeetCode: https://leetcode.com/u/rohan_sinha2003/. Kaggle: https://www.kaggle.com/rohansinha2003. X / Twitter: https://x.com/RohanSinhaAI. Hugging Face: https://huggingface.co/2003Rohansinha.',
+      'Email: 2003rohansinha@gmail.com. GitHub: https://github.com/Rohansinha2003. LinkedIn: https://www.linkedin.com/in/rohan-sinhaa/. LeetCode: https://leetcode.com/u/rohan_sinha2003/. GeeksforGeeks: https://www.geeksforgeeks.org/profile/2003rohansinha?tab=activity. Kaggle: https://www.kaggle.com/rohansinha2003. X / Twitter: https://x.com/RohanSinhaAI. Hugging Face: https://huggingface.co/2003Rohansinha.',
     links: [
       { label: 'Email Rohan', url: 'mailto:2003rohansinha@gmail.com' },
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rohan-sinhaa/' },
       { label: 'LeetCode', url: 'https://leetcode.com/u/rohan_sinha2003/' },
+      { label: 'GeeksforGeeks', url: 'https://www.geeksforgeeks.org/profile/2003rohansinha?tab=activity' },
       { label: 'Kaggle', url: 'https://www.kaggle.com/rohansinha2003' },
       { label: 'X (Twitter)', url: 'https://x.com/RohanSinhaAI' },
       { label: 'Hugging Face', url: 'https://huggingface.co/2003Rohansinha' },

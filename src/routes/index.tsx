@@ -188,6 +188,9 @@ function Home() {
             {site.leetcode && (
               <a className="btn" href={site.leetcode} target="_blank" rel="noreferrer">LeetCode</a>
             )}
+            {site.gfg && (
+              <a className="btn" href={site.gfg} target="_blank" rel="noreferrer">GeeksforGeeks</a>
+            )}
             {site.kaggle && (
               <a className="btn" href={site.kaggle} target="_blank" rel="noreferrer">Kaggle</a>
             )}

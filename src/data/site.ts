@@ -15,6 +15,7 @@ export const site = {
   linkedin: 'https://www.linkedin.com/in/rohan-sinhaa/',
   x: 'https://x.com/RohanSinhaAI',
   leetcode: 'https://leetcode.com/u/rohan_sinha2003/',
+  gfg: 'https://www.geeksforgeeks.org/profile/2003rohansinha?tab=activity',
   kaggle: 'https://www.kaggle.com/rohansinha2003',
   huggingface: 'https://huggingface.co/2003Rohansinha',
   resumeUrl: '/resume',
